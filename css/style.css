@@ -1,0 +1,104 @@
+body {
+    font-family: Helvetica;
+    font-size: 1.2em;
+    color: rgb(12, 0, 0);
+    text-align: left;
+}
+
+.container {
+    display: grid;
+    grid-template: 150px 35px 80% 50px/ 75% 5px 25%;
+    grid-template-areas: 
+        "h1 h1 h2"
+        "m m m"
+        "mn vl ct"
+        "f f f2"
+        ;
+}
+
+header {
+    grid-area: h1;
+    background-color: #ffffff;
+    padding: 0 0 0 5px;
+}
+
+langs {
+    grid-area: h2;
+    background-color: #ffffff;
+    padding: 10px 27px;
+    text-align: right;
+}
+
+sections {
+    grid-area: m;
+    background-color: ffffff;
+    text-decoration;
+    padding: 0px 0px;
+}
+
+main {
+    grid-area: mn;
+    background-color: #ffffff;
+    border-right: rgb(12, 0, 0);
+    padding: 0 20px 0 0;
+}
+
+contact {
+    grid-area: ct;
+    border-left: #000000 6px;
+    font-size: 18px;    
+    padding: 20px 25px 0px 0;
+    text-align: right;
+}
+
+footer {
+    grid-area: f;
+    font-size: 0.7em;
+    padding: 50px;
+    text-align: center;
+    color: grey;
+}
+
+footer2 {
+    grid-area: f2;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000000;
+    padding: 0 15px;
+}
+
+a:hover {
+    color: red;
+    text-transform: uppercase;
+}
+
+a[href^="mailto"] {
+    color: rgb(136, 133, 133);
+    margin: auto;
+    text-align: right;
+    text-transform: none;
+}
+
+a[target] {
+    color: rgb(136, 133, 133);
+    margin: auto;
+    text-align: right;
+    text-transform: none;
+}
+
+span {
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+vline {
+    background-color: red;
+  }
