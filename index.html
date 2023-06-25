@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
 
-<head>
-  <title>Glass Art Verre</title>
-  <style>
-    .wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      min-width: 320px;
-      height: 100vh;
-      background-image: linear-gradient(45deg, rgba(84, 53, 65, 1) 0%, rgba(174, 138, 134, 1) 50%, rgba(95, 159, 205, 1) 100%);
-    }
+   
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+     
+    <title>Home</title>
 
-    .inner {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      text-align: center;
-      font-size: 6em;
-      font-family: 'Times New Roman', Times, serif;
-      position: relative;
-    }
+     
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+  }
+ .wrap {
+  display: inline-block;
+  width: 100vw;
+  height: 300px;
+  background-image: linear-gradient(45deg, rgba(95,159,205,1) 0%, rgb(95,159,205,1) 50%, rgba(95,159,205,1) 100%);
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: transparent;
+  flex-flow: row nowrap;
+}
+.inner * {
+  background: url(https://i1.wp.com/i.pinimg.com/originals/b1/53/1b/b1531b8d7df182324d8abc70496168f0.jpg);
+  -webkit-background-clip: text;
+}
+.text-line-one {
+  width: 100%;
+  letter-spacing: 10px;
+  word-spacing: 25px;
+}
 
-    .inner::before {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: linear-gradient(180deg, rgba(95, 159, 205, 1), rgba(95, 159, 205, 0));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      mix-blend-mode: difference;
-    }
+.reversed-text {
+    transform: scaleX(-1);    ;
+}
+.text-line-one, .reversed-text {
+    display: inline-block;
+    font-size: 120px;
+    padding-top: 50px;
+}
+.r {
+  margin-right: -28px;
+}
+.v {
+  font-size: 150px;
+}
 
-    .text-line {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      color: #fff; /* Добавленное свойство */
+@media (max-width: 320px){
+    .text-line-one {
+        width: 100%;
+        letter-spacing: 0px;
+        word-spacing: 0px;
     }
-
-    .text-line:last-child {
-      margin-bottom: 0;
+    .text-line-one, .reversed-text {
+        display: inline-block;
+        font-size: 30px;
+        padding-top: 30px;
     }
-
-    .reversed-text {
-      display: inline-block;
-      transform: scaleX(-1);
+    .r {
+        margin-right: -10px;
     }
-  </style>
-</head>
+    .v {
+        font-size: 50px;
+    }
+}
+    </style>
 
-<body>
-  <header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="wrap">
-          <div class="inner" data-text="GLASS ART VERRE">
-            <div class="text-line">
-              GLASS ART VER<span class="reversed-text">RE</span>
-            </div>
-            <div class="text-line">
-              boutique de decorations et bijoux
+    </head>
+     
+    <body>
+     <header>
+        <div class="container-fluid"> 
+            <div class="row"> 
+              <div class="wrap">
+                <div class="inner">
+                  <div class="text-line-one">ART GLASS <span class="v">V</span>E<div class="reversed-text r">R</div>R<div class="reversed-text">E</div></div>
+                  
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </header>
-</body>
-
-</html>
+    </header>
+      
+     
+     
+    </body>
+    </html>
