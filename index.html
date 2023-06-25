@@ -19,13 +19,23 @@
       flex-flow: column;
       align-items: center;
       text-align: center;
-      background: url(https://i1.wp.com/i.pinimg.com/originals/b1/53/1b/b1531b8d7df182324d8abc70496168f0.jpg);
-      font-size: 40px;
-      font-family: Mulish;
-      color: transparent;
+      font-size: 6em;
+      font-family: 'Times New Roman', Times, serif;
+      position: relative;
+    }
+
+    .inner::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(180deg, rgba(95, 159, 205, 1), rgba(95, 159, 205, 0));
       -webkit-background-clip: text;
-      background-clip: text; /* Добавленное свойство */
-      -webkit-text-fill-color: transparent; /* Добавленное свойство */
+      background-clip: text;
+      color: transparent;
+      mix-blend-mode: difference;
     }
 
     .text-line {
@@ -33,6 +43,7 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 10px;
+      color: #fff; /* Добавленное свойство */
     }
 
     .text-line:last-child {
@@ -51,7 +62,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="wrap">
-          <div class="inner">
+          <div class="inner" data-text="GLASS ART VERRE">
             <div class="text-line">
               GLASS ART VER<span class="reversed-text">RE</span>
             </div>
